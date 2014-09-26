@@ -1,0 +1,326 @@
+# Settings for the app
+app:
+  # HTML Title
+  title: Philadelphia 2035 Map
+  # Header name
+  name: Philadelphia 2035 Map
+  # Meta description that will show up in Google search results
+  meta_description: _(Shareabouts is a mapping tool to gather crowd sourced public input. Use it to collect suggested locations and comments in a social, engaging process.)
+  # Meta author that will show up in Google search results
+  meta_author: OpenPlans.org
+
+
+  # When the map loads, existing places will be loaded in chunks. By default,
+  # the size of the chunks will be a reasonable default dictated by the API
+  # server. If you would like to override the chunk size, use this setting:
+  # places_page_size: 100
+
+  # Optional. List view is supported by default. Set to false to disable.
+  # list_enabled: false
+
+# Settings for map and layer configs
+map:
+  geolocation_enabled: true
+  geolocation_onload: false
+
+  geocoding_enabled: true
+  geocode_field_label: _(Enter an address...)
+
+  options:
+    center:
+      lat: 39.92439
+      lng: -75.169751
+    zoom: 14
+    minZoom: 13
+    maxZoom: 18
+  layers:
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
+      attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>. Geocoding Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">.'
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.PhilaPlanDist/{z}/{x}/{y}.png
+
+# The keys show up in the dropdown list when you are adding a new place
+# The values map the place type to map icons (defined below).
+place_types:
+  strength:
+    label: _(Strength)
+    rules:
+      - condition: '"{{location_type}}" === "strength" && {{map.zoom}} < 14 && {{layer.focused}} === false'
+        # Display landmarks as circles (vectors) when zoomed out
+
+        style:
+          color: '#66c06b'
+          radius: 4
+          weight: 2
+          opacity: 1
+          fillOpacity: 0.9
+
+      - condition: '"{{location_type}}" === "strength" && {{map.zoom}} >= 14 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers-04.png
+          iconSize: [19, 19]
+          iconAnchor: [10, 10]
+
+      - condition: '"{{location_type}}" === "strength" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/marker-07.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+  weakness:
+    label: _(Weakness)
+    rules:
+      - condition: '"{{location_type}}" === "weakness" && {{map.zoom}} < 14 && {{layer.focused}} === false'
+        # Display landmarks as circles (vectors) when zoomed out
+
+        style:
+          color: '#8e58a4'
+          radius: 4
+          weight: 2
+          opacity: 1
+          fillOpacity: 0.9
+
+      - condition: '"{{location_type}}" === "weakness" && {{map.zoom}} >= 14 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers-01.png
+          iconSize: [19, 19]
+          iconAnchor: [10, 10]
+
+      - condition: '"{{location_type}}" === "weakness" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/marker-08.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+  opportunity:
+    label: _(Opportunity)
+    rules:
+      - condition: '"{{location_type}}" === "opportunity" && {{map.zoom}} < 14 && {{layer.focused}} === false'
+        # Display landmarks as circles (vectors) when zoomed out
+
+        style:
+          color: '#0171a6'
+          radius: 4
+          weight: 2
+          opacity: 1
+          fillOpacity: 0.9
+
+      - condition: '"{{location_type}}" === "opportunity" && {{map.zoom}} >= 14 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers-03.png
+          iconSize: [19, 19]
+          iconAnchor: [10, 10]
+
+      - condition: '"{{location_type}}" === "opportunity" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/marker-06.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+  threat:
+    label: _(Threat)
+    rules:
+      - condition: '"{{location_type}}" === "threat" && {{map.zoom}} < 14 && {{layer.focused}} === false'
+        # Display landmarks as circles (vectors) when zoomed out
+
+        style:
+          color: '#e6801b'
+          radius: 4
+          weight: 2
+          opacity: 1
+          fillOpacity: 0.9
+
+      - condition: '"{{location_type}}" === "threat" && {{map.zoom}} >= 14 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers-02.png
+          iconSize: [19, 19]
+          iconAnchor: [10, 10]
+
+      - condition: '"{{location_type}}" === "threat" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/marker-05.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+activity:
+  # Optional. Activity is supported by default. Set to false to disable.
+  enabled: true
+  # How often to refresh the activity list, in milliseconds.
+  interval: 30000
+
+place:
+  adding_supported: true
+  add_button_label: _(Add a Place)
+  # Labels for the buttons that toggle the map and list views
+  show_list_button_label: _(List All Places)
+  show_map_button_label: _(Show the Map)
+  action_text: _(added)
+  title: _(Tell us more...)
+  action_text: _(created)
+  anonymous_name: _(Someone)
+  submit_button_label: _(Submit)
+
+  location_item_name: location
+
+  items:
+    - prompt: _(Location Name)
+      type: text
+      name: name
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Location Name)
+        - key: size
+          value: 30
+    - prompt: _(Location Type)
+      type: select
+      options:
+        - label: _(Choose One)
+          value: ''
+        - label: _(Strength)
+          value: strength
+        - label: _(Weakness)
+          value: weakness
+        - label: _(Opportunity)
+          value: opportunity
+        - label: _(Threat)
+          value: threat
+      name: location_type
+      attrs:
+        - key: required
+    - prompt: _(Description)
+      type: textarea
+      name: description
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Description...)
+    - prompt: _(Image)
+      inputfile_label: _(Add an Image)
+      type: file
+      name: my_image
+      optional: true
+      attrs:
+        - key: accept
+          value: image/*
+    - prompt: _(Your Name)
+      type: text
+      name: submitter_name
+      optional: true
+      sticky: true
+      attrs:
+        - key: placeholder
+          value: _(Name)
+        - key: size
+          value: 30
+    - prompt: _(Your Email)
+      type: text
+      name: private-submitter_email
+      optional: true
+      sticky: true
+      attrs:
+        - key: placeholder
+          value: _(Email address)
+        - key: size
+          value: 30
+    - prompt: _(Your Zip Code)
+      type: text
+      name: private-zip
+      optional: true
+      sticky: true
+      attrs:
+        - key: placeholder
+          value: _(Zip Code)
+        - key: size
+          value: 30
+
+survey:
+  submission_type: comments
+
+  # Response config
+  show_responses: true
+  # Set to true if the user should only submit a survey once
+  single_submission: false
+  response_name: _(comment)
+  response_plural_name: _(comments)
+  action_text: _(commented on)
+  anonymous_name: _(Someone)
+
+  # Survey form config
+  title: _(Leave a Comment)
+  form_link_text: _(Leave a Comment)
+  submit_btn_text: _(Comment)
+  items:
+    - prompt: _(Comment)
+      label: _(Comment)
+      type: textarea
+      name: comment
+      attrs:
+        - key: required
+    - prompt: _(Your Name)
+      type: text
+      name: submitter_name
+      sticky: true
+
+support:
+  submission_type: support
+  submit_btn_text: _(Support)
+  response_name: _(support)
+  response_plural_name: _(supports)
+  action_text: supported
+  anonymous_name: _(Someone)
+
+pages:
+  - title: _(About)
+    slug: about
+    name: overview
+    start_page: true
+
+  - title: _(More...)
+    pages:
+      - title: _(History of the area)
+        slug: history
+        url: /static/pages/history.html
+
+      - title: _(Existing conditions)
+        slug: existing
+        url: /static/pages/existing.html
+
+  - title: _(Links)
+    pages:
+      - title: _(Philadelphia 2035)
+        external: true
+        url: http://phila2035.org/
+      - title: _(Meeting Dates)
+        external: true
+        url: http://phila2035.org/
+      - title: _(Story Maps)
+        external: true
+        url: http://phila2035.org/
+
+notifications:
+  on_new_place: true
+  submitter_email_field: private-submitter_email

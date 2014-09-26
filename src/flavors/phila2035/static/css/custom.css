@@ -1,0 +1,73 @@
+/*
+ * This CSS file follows the default Shareabouts style.css.
+ * All rules herein will override the default Shareabouts styles.
+ * NOTE: "With great power comes great responsibility."
+ */
+
+/* =Header
+-------------------------------------------------------------- */
+
+#site-header {
+  color: #eee;
+  background-color: #fff;
+  position: relative;
+  z-index: 40;
+  padding: 0.5em;
+  box-shadow: 0 0.325em 0 rgba(0,0,0,0.1);
+}
+
+/* =Geocoding
+-------------------------------------------------------------- */
+
+#geocode-address-bar {
+  background-color: #eee;
+}
+.geocoding-enabled #geocode-address-bar {
+  display: block;
+}
+.geocode-address-form {
+  position: relative;
+}
+input.geocode-address-field {
+  width: 100%;
+  border-width: 0;
+  line-height: 1.25;
+  background-color: #fff;
+  color: #eee;
+  padding-left: 2.125em;
+}
+
+/* =The Ticker
+-------------------------------------------------------------- */
+
+#ticker {
+  background-color: #fff;
+}
+ul.recent-points {
+  color: #000;
+}
+.recent-points li {
+  border-bottom: 1px solid #ddd;
+}
+.recent-points li:hover {
+  background: #eee;
+}
+.recent-points a {
+  color: #000;
+}
+.recent-points li:hover a,
+.recent-points a:hover {
+  color: #000;
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (min-width: 1300px) {
+}
