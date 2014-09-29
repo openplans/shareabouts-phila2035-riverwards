@@ -276,4 +276,7 @@ a.openplans-logo {
     color: #fff;
     background-color: #0171a6;
   }
+  #add-place-btn-container {
+    background-color: transparent;
+  }
 }
