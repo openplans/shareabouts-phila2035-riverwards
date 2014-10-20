@@ -22,6 +22,8 @@ body, select, input, textarea {
 /*  font-family: Tahoma, Verdana, Segoe, sans-serif;*/
 }
 
+label { font-size: 1em; text-transform: none; color: #555; }
+
 /* Buttons */
 .btn,
 .btn:visited,
@@ -44,10 +46,18 @@ body, select, input, textarea {
 .btn-secondary:link {
   background-color: #0171a6;
   color: #fff;
+  text-align: left;
 }
 .btn-secondary:hover {
   background-color: #e6801b;
   color: #fff;
+}
+
+.drag-marker-instructions,
+.drag-marker-warning {
+  background-color: #e6801b;
+  color: #fff;
+  text-shadow: none;
 }
 
 /* Forms */
@@ -143,6 +153,9 @@ a.add-place:hover {
 #geocode-address-bar {
   background-color: #eee;
   border-right: 1px solid #ddd;
+}
+.geocode-address-label {
+  font-size: 0.75em;
 }
 input.geocode-address-field {
   border-width: 0;
