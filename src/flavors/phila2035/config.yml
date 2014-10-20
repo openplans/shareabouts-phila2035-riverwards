@@ -186,13 +186,13 @@ place:
   location_item_name: location
 
   items:
-    - prompt: _(Location Name)
+    - prompt: _(Location)
       type: text
       name: name
       optional: true
       attrs:
         - key: placeholder
-          value: _(Location Name)
+          value: _(Location)
         - key: size
           value: 30
     - prompt: _(Location Type)
@@ -217,7 +217,7 @@ place:
       optional: true
       attrs:
         - key: placeholder
-          value: _(Description...)
+          value: _(...)
     - prompt: _(Image)
       inputfile_label: _(Add an Image)
       type: file
@@ -229,7 +229,6 @@ place:
     - prompt: _(Your Name)
       type: text
       name: submitter_name
-      optional: true
       sticky: true
       attrs:
         - key: placeholder
@@ -246,16 +245,29 @@ place:
           value: _(Email address)
         - key: size
           value: 30
-    - prompt: _(Your Zip Code)
+    - prompt: _(Your ZIP Code (private, will not be shared))
       type: text
       name: private-zip
-      optional: true
       sticky: true
       attrs:
         - key: placeholder
           value: _(Zip Code)
         - key: size
           value: 30
+        - key: required
+          value: true
+    - prompt: _(Are you a resident of this district?)
+      type: select
+      options:
+        - label: _(Y/N)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no
+      name: private-resident
+      attrs:
+        - key: required
 
 survey:
   submission_type: comments
@@ -314,10 +326,7 @@ pages:
       - title: _(Philadelphia 2035)
         external: true
         url: http://phila2035.org/
-      - title: _(Meeting Dates)
-        external: true
-        url: http://phila2035.org/
-      - title: _(Story Maps)
+      - title: _(Timeline)
         external: true
         url: http://phila2035.org/
 
