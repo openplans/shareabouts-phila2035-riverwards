@@ -34,7 +34,7 @@ map:
     minZoom: 13
     maxZoom: 18
   layers:
-    - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.gcp3ekpl/{z}/{x}/{y}.png
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>. Geocoding Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">.'
     - url: http://{s}.tiles.mapbox.com/v3/openplans.PhilaPlanDist/{z}/{x}/{y}.png
 
@@ -200,14 +200,14 @@ place:
       options:
         - label: _(Choose One)
           value: ''
-        - label: _(Strength)
-          value: strength
-        - label: _(Weakness)
-          value: weakness
+        - label: _(Destination)
+          value: destination
+        - label: _(Barrier)
+          value: barrier
+        - label: _(Asset)
+          value: asset
         - label: _(Opportunity)
           value: opportunity
-        - label: _(Threat)
-          value: threat
       name: location_type
       attrs:
         - key: required
@@ -306,29 +306,37 @@ support:
   anonymous_name: _(Someone)
 
 pages:
-  - title: _(About)
-    slug: about
-    name: overview
-    start_page: true
-
-  - title: _(More...)
+  - title: _(Welcome)
     pages:
+      - title: _(Project Purpose)
+        slug: about
+        url: /static/pages/about.html
+        startpage: true
+      - title: _(Directions for Providing Feedback)
+        slug: instructions
+        url: /static/pages/instructions.html
+  - title: _(About the District)
+    pages:
+      - title: _(Planning Process)
+        slug: planning
+        url: /static/pages/planning.html
       - title: _(History of the area)
         slug: history
         url: /static/pages/history.html
-
       - title: _(Existing conditions)
         slug: existing
         url: /static/pages/existing.html
-
+  - title: _(Timeline)
+    slug: timeline
+    url: /static/pages/timeline.html
   - title: _(Links)
     pages:
       - title: _(Philadelphia 2035)
         external: true
         url: http://phila2035.org/
-      - title: _(Timeline)
+      - title: _(Philadelphia City Planning Commission)
         external: true
-        url: http://phila2035.org/
+        url: http://www.phila.gov/cityplanning/Pages/default.aspx
 
 notifications:
   on_new_place: true
