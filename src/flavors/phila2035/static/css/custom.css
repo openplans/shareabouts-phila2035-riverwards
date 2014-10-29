@@ -258,14 +258,14 @@ a.openplans-logo {
 /*    font-size: 0.75em;*/
   }
   .access li {
-    margin: 0;
+    margin: 1;
   }
   .access a, 
   .access a:visited, 
   .access a:active, 
   .access a:link {
-    background-color: #fff;
-    color: #e6801b;
+    background-color: #e6801b;
+    color: #fff;
     box-shadow: none;
   }
   .access a:hover {
@@ -279,8 +279,8 @@ a.openplans-logo {
   a.list-toggle-btn:visited, 
   a.list-toggle-btn:active, 
   a.list-toggle-btn:link {
-    background-color: #fff;
-    color: #e6801b;
+    background-color: #e6801b;
+    color: #fff;
     text-shadow: none;
     box-shadow: none;
     border: 0;
