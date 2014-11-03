@@ -321,8 +321,8 @@ pages:
         slug: planning
         url: /static/pages/planning.html
       - title: _(History of the area)
-        slug: history
-        url: /static/pages/history.html
+        external: true
+        url: http://bit.ly/104yB44
       - title: _(Existing conditions)
         slug: existing
         url: /static/pages/existing.html
