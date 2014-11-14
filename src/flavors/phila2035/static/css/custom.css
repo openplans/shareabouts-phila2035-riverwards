@@ -207,6 +207,26 @@ input.geocode-address-field {
 }
 
 
+/* =Legend & Guidelines Chart
+-------------------------------------------------------------- */
+
+.legend {
+  padding: 15px 10px;
+  border-bottom: 1px solid #777;
+  list-style: none;
+  margin: 0;
+}
+.legend li {
+  padding: 8px 0 2px 0 !important;
+}
+.legend img {
+  float: left;
+  position: relative;
+  margin-right: 8px;
+  margin-top: 1px;
+  z-index: 2;
+}
+
 /* =Footer
 -------------------------------------------------------------- */
 
