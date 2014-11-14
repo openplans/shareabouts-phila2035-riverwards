@@ -204,6 +204,7 @@ place:
   action_text: _(added)
   title: _(Tell us more...)
   action_text: _(created)
+  help_text: _(* indicates required items)
   anonymous_name: _(Someone)
   submit_button_label: _(Submit)
 
@@ -213,13 +214,12 @@ place:
     - prompt: _(Location)
       type: text
       name: name
-      optional: true
       attrs:
         - key: placeholder
-          value: _(Location)
+          value: _(e.g. YMCA)
         - key: size
           value: 30
-    - prompt: _(Location Type)
+    - prompt: _(Location Type*)
       type: select
       options:
         - label: _(Choose One)
@@ -238,19 +238,17 @@ place:
     - prompt: _(Description)
       type: textarea
       name: description
-      optional: true
       attrs:
         - key: placeholder
-          value: _(...)
+          value: _(e.g. This site is an asset as it is constantly used by the community for various events.)
     - prompt: _(Image)
       inputfile_label: _(Add an Image)
       type: file
       name: my_image
-      optional: true
       attrs:
         - key: accept
           value: image/*
-    - prompt: _(Your Name)
+    - prompt: _(Your Name*)
       type: text
       name: submitter_name
       sticky: true
@@ -259,17 +257,18 @@ place:
           value: _(Name)
         - key: size
           value: 30
+        - key: required
+          value: true
     - prompt: _(Your Email)
       type: text
       name: private-submitter_email
-      optional: true
       sticky: true
       attrs:
         - key: placeholder
           value: _(Email address)
         - key: size
           value: 30
-    - prompt: _(Your ZIP Code (private, will not be shared))
+    - prompt: _(Your ZIP Code* (private, will not be shared))
       type: text
       name: private-zip
       sticky: true
@@ -280,7 +279,7 @@ place:
           value: 30
         - key: required
           value: true
-    - prompt: _(Are you a resident of this district?)
+    - prompt: _(Are you a resident of this district?*)
       type: select
       options:
         - label: _(Y/N)
@@ -344,10 +343,10 @@ pages:
       - title: _(Planning Process)
         slug: planning
         url: /static/pages/planning.html
-      - title: _(History of the area)
+      - title: _(History of the Area)
         external: true
         url: http://bit.ly/104yB44
-      - title: _(Existing conditions)
+      - title: _(Existing Conditions)
         slug: existing
         url: /static/pages/existing.html
   - title: _(Timeline)
