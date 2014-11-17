@@ -47,28 +47,26 @@ place_types:
       - condition: '"{{location_type}}" === "destination" && {{map.zoom}} < 14 && {{layer.focused}} === false'
         # Display landmarks as circles (vectors) when zoomed out
 
-        style:
-          color: '#8e58a4'
-          radius: 4
-          weight: 2
-          opacity: 1
-          fillOpacity: 0.9
+        icon:
+          iconUrl: /static/css/images/destination.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "destination" && {{map.zoom}} >= 14 && {{map.zoom}} <16 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers-09.png
-          iconSize: [20, 32]
-          iconAnchor: [10, 32]
+          iconUrl: /static/css/images/destination.png
+          iconSize: [20, 20]
+          iconAnchor: [10, 10]
 
       - condition: '"{{location_type}}" === "destination" && {{map.zoom}} >= 16 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers-09.png
-          iconSize: [30, 48]
-          iconAnchor: [15, 48]
+          iconUrl: /static/css/images/destination.png
+          iconSize: [30, 30]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "destination" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -84,28 +82,26 @@ place_types:
       - condition: '"{{location_type}}" === "barrier" && {{map.zoom}} < 14 && {{layer.focused}} === false'
         # Display landmarks as circles (vectors) when zoomed out
 
-        style:
-          color: '#e6801b'
-          radius: 4
-          weight: 2
-          opacity: 1
-          fillOpacity: 0.9
+        icon:
+          iconUrl: /static/css/images/barrier.png
+          iconSize: [50, 10]
+          iconAnchor: [25, 5]
 
       - condition: '"{{location_type}}" === "barrier" && {{map.zoom}} >= 14 && {{map.zoom}} <16 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers-10.png
-          iconSize: [20, 32]
-          iconAnchor: [10, 32]
+          iconUrl: /static/css/images/barrier.png
+          iconSize: [75, 15]
+          iconAnchor: [38, 8]
 
       - condition: '"{{location_type}}" === "barrier" && {{map.zoom}} >= 16 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers-10.png
-          iconSize: [30, 48]
-          iconAnchor: [15, 48]
+          iconUrl: /static/css/images/barrier.png
+          iconSize: [100, 20]
+          iconAnchor: [50, 10]
 
       - condition: '"{{location_type}}" === "barrier" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -121,28 +117,26 @@ place_types:
       - condition: '"{{location_type}}" === "asset" && {{map.zoom}} < 14 && {{layer.focused}} === false'
         # Display landmarks as circles (vectors) when zoomed out
 
-        style:
-          color: '#0171a6'
-          radius: 4
-          weight: 2
-          opacity: 1
-          fillOpacity: 0.9
+        icon:
+          iconUrl: /static/css/images/asset.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "asset" && {{map.zoom}} >= 14 && {{map.zoom}} <16 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers-11.png
-          iconSize: [20, 32]
-          iconAnchor: [10, 32]
+          iconUrl: /static/css/images/asset.png
+          iconSize: [20, 20]
+          iconAnchor: [10, 10]
 
       - condition: '"{{location_type}}" === "asset" && {{map.zoom}} >= 16 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers-11.png
-          iconSize: [30, 48]
-          iconAnchor: [15, 48]
+          iconUrl: /static/css/images/asset.png
+          iconSize: [30, 30]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "asset" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -158,28 +152,26 @@ place_types:
       - condition: '"{{location_type}}" === "opportunity" && {{map.zoom}} < 14 && {{layer.focused}} === false'
         # Display landmarks as circles (vectors) when zoomed out
 
-        style:
-          color: '#66c06b'
-          radius: 4
-          weight: 2
-          opacity: 1
-          fillOpacity: 0.9
+        icon:
+          iconUrl: /static/css/images/opportunity.png
+          iconSize: [10, 30]
+          iconAnchor: [5, 30]
 
       - condition: '"{{location_type}}" === "opportunity" && {{map.zoom}} >= 14 && {{map.zoom}} <16 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers-12.png
-          iconSize: [20, 32]
-          iconAnchor: [10, 32]
+          iconUrl: /static/css/images/opportunity.png
+          iconSize: [16, 48]
+          iconAnchor: [8, 48]
 
       - condition: '"{{location_type}}" === "opportunity" && {{map.zoom}} >= 16 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers-12.png
-          iconSize: [30, 48]
-          iconAnchor: [15, 48]
+          iconUrl: /static/css/images/opportunity.png
+          iconSize: [20, 60]
+          iconAnchor: [10, 60]
 
       - condition: '"{{location_type}}" === "opportunity" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
