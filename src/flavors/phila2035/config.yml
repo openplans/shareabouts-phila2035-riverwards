@@ -197,10 +197,10 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Share your Knowledge)
+  add_button_label: _(SHARE YOUR KNOWLEDGE)
   # Labels for the buttons that toggle the map and list views
-  show_list_button_label: _(List All Places)
-  show_map_button_label: _(Show the Map)
+  show_list_button_label: _(LIST ALL PLACES)
+  show_map_button_label: _(SHOW THE MAP)
   action_text: _(added)
   title: _(Tell us more...)
   action_text: _(created)
@@ -329,16 +329,16 @@ support:
   anonymous_name: _(Someone)
 
 pages:
-  - title: _(Welcome)
+  - title: _(WELCOME)
     pages:
       - title: _(Project Purpose)
         slug: about
         url: /static/pages/about.html
-        startpage: true
+        start_page: true
       - title: _(Directions for Providing Feedback)
         slug: instructions
         url: /static/pages/instructions.html
-  - title: _(About the District)
+  - title: _(ABOUT THE DISTRICT)
     pages:
       - title: _(Planning Process)
         slug: planning
@@ -349,10 +349,10 @@ pages:
       - title: _(Existing Conditions)
         external: true
         url: http://philadelphia.maps.arcgis.com/apps/StorytellingTextLegend/index.html?appid=6519f530df874310b9520ccfcdbcd789
-  - title: _(Timeline)
+  - title: _(TIMELINE)
     slug: timeline
     url: /static/pages/timeline.html
-  - title: _(Links)
+  - title: _(LINKS)
     pages:
       - title: _(Philadelphia 2035)
         external: true
