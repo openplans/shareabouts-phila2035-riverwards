@@ -159,7 +159,7 @@ place_types:
         # Display landmarks as circles (vectors) when zoomed out
 
         style:
-          color: '#66c06b'
+          color: '#8e58a4'
           radius: 4
           weight: 2
           opacity: 1
