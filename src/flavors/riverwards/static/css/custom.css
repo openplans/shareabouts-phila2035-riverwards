@@ -1,0 +1,334 @@
+
+/* =Color Palette 
+-------------------------------------------------------------- */
+
+/* 
+#0171a6 blue
+#e6801b orange
+#8e58a4 purple
+#66c06b green
+*/
+
+
+/* =Base Styles
+-------------------------------------------------------------- */
+
+body {
+  background-color: #eee;
+}
+
+/* Typography */
+body, select, input, textarea {
+/*  font-family: Tahoma, Verdana, Segoe, sans-serif;*/
+}
+
+label { font-size: 1em; text-transform: none; color: #555; }
+
+/* Buttons */
+.btn,
+.btn:visited,
+.btn:link {
+  background-color: #0171a6;
+  color: #fff;
+  text-transform: none;
+  font-size: 16px;
+}
+.btn:hover, .button:hover, button:hover {
+  background-color: #e6801b;
+}
+.btn-primary, .btn-primary:visited, .btn-primary:link {
+  background-color: #0171a6;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1.125em;
+  display: block;
+  padding: 0.5em 0.675em;
+}
+.btn-primary:hover {
+  background-color: #e6801b;
+}
+.btn-secondary,
+.btn-secondary:visited,
+.btn-secondary:link {
+  background-color: #0171a6;
+  color: #fff;
+  text-align: left;
+}
+.btn-secondary:hover {
+  background-color: #e6801b;
+  color: #fff;
+}
+
+.btn-large {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1.125em;
+  display: block;
+  padding: 0.625em 0.625em;
+}
+
+.drag-marker-instructions,
+.drag-marker-warning {
+  background-color: #e6801b;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* Forms */
+label {
+}
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+textarea {
+  border: 0.25em solid #ccc;
+}
+input:focus,
+textarea:focus {
+  border: 0.25em solid #66c06b;
+  outline: 2px solid #66c06b;
+}
+
+
+/* =The Site Header
+-------------------------------------------------------------- */
+
+#site-header {
+  color: #555;
+  background-color: #fff;
+}
+#site-logo {
+  float: left;
+  max-height: 1.375em;
+  margin-bottom: 0.25em;
+}
+#nav-btn {
+  background-color: #fff;
+  color: #e6801b;
+  text-shadow: none;
+}
+.access a, 
+.access a:visited, 
+.access a:active, 
+.access a:link {
+  color: #fff;
+  background-color: #0171a6;
+  border: 0;
+}
+.access a:hover {
+  background-color: #e6801b;
+  color: #fff;
+}
+#auth-nav-container {
+}
+.sign-in-menu {
+  background-color: #ddd;
+}
+.sign-in-menu:before {
+  border-bottom-color: #ddd;
+}
+a#sign-in-btn {
+  color: #0171a6;
+}
+a#sign-in-btn:hover {
+  color: #e6801b;
+}
+
+
+/* =The Big Button to Add A New Point
+-------------------------------------------------------------- */
+
+#add-place-btn-container {
+  background-color: #fff;
+  border-bottom: 0;
+}
+a.add-place {
+  background-color: #000;
+  color: #eee;
+  text-shadow: none;
+}
+a.add-place:hover {
+  color: #fff;
+}
+
+
+/* =Geocoding
+-------------------------------------------------------------- */
+
+#geocode-address-bar {
+  background-color: #eee;
+  border-right: 1px solid #ddd;
+}
+.geocode-address-label {
+  font-size: 0.75em;
+}
+input.geocode-address-field {
+  border-width: 0;
+  background-color: #fff;
+  color: #555;
+}
+#geocode-address-bar .error {
+  line-height: 1.75;
+  background-color: #F26161;
+  box-shadow: 2px 2px 0 #F26161, 2px -2px 0 #F26161, -2px 2px 0 #F26161, -2px -2px 0 #F26161;
+}
+#geocode-address-bar .error + form {
+  box-shadow: 2px 2px 0 #F26161, 2px -2px 0 #F26161, -2px 2px 0 #F26161, -2px -2px 0 #F26161;
+}
+#geocode-address-bar .error.is-hidden + form {
+  box-shadow: none;
+}
+.geocode-spinner {
+  background-color: #fff;
+}
+
+
+/* =The Ticker
+-------------------------------------------------------------- */
+
+#ticker {
+  background-color: #fff;
+}
+.legend {
+  background-color: #fff;
+  margin: 0;
+  padding: 1em;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+}
+.recent-points li {}
+.recent-points li:hover {
+  background: #eee;
+}
+.recent-points a {
+  color: #555;
+  border-bottom: 1px solid #ddd;
+}
+.recent-points li:hover a,
+.recent-points a:hover {
+  color: #fff;
+  background-color: #e6801b;
+  border-color: #e6801b;
+}
+
+
+/* =Legend & Guidelines Chart
+-------------------------------------------------------------- */
+
+.legend {
+  padding: 15px 10px;
+  border-bottom: 1px solid #777;
+  list-style: none;
+  margin: 0;
+}
+.legend li {
+  padding: 8px 0 2px 0 !important;
+}
+.legend img {
+  float: left;
+  position: relative;
+  margin-right: 8px;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#colophon {
+  background-color: #eee;
+  color: #555;
+}
+a.shareabouts-logo {
+  color: #308fbf !important;
+}
+a.openplans-logo {
+  color: #f68a3d !important;
+}
+
+
+/* =Place Details
+-------------------------------------------------------------- */
+
+/* Promotion: Voting & Sharing */
+.user-support label {
+  color: #fff;
+}
+.user-support input[type=checkbox]:checked ~ label {
+}
+.user-support:hover label {
+  background-color: #e6801b;
+  color: #fff;
+}
+
+
+/* =Media Queries
+-------------------------------------------------------------- */
+
+@media only screen and (min-width: 22em) {
+  #site-tagline {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  #site-title a:link,
+  #site-title a:visited {
+    font-size: 1em;
+  }
+  #site-logo {
+    max-height: 4em;
+  }
+  .access {
+/*    font-size: 0.75em;*/
+  }
+  .access li {
+    margin: 1;
+  }
+  .access a, 
+  .access a:visited, 
+  .access a:active, 
+  .access a:link {
+    background-color: #0171a6;
+    color: #fff;
+    box-shadow: none;
+  }
+  .access a:hover {
+    background-color: #e6801b;
+    color: #fff;
+  }
+  .list-toggle-nav {
+/*    font-size: 0.75em;*/
+    float: left;
+  }
+  a.list-toggle-btn:visited, 
+  a.list-toggle-btn:active, 
+  a.list-toggle-btn:link {
+    background-color: #0171a6;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+    border: 0;
+  }
+  a.list-toggle-btn:hover {
+    color: #fff;
+    background-color: #e6801b;
+  }
+  #add-place-btn-container {
+    background-color: transparent;
+  }
+}
