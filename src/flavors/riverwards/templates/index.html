@@ -36,6 +36,10 @@
     <meta property="og:title" content="{{ config.app.title }}" />
     <meta property="og:description" content="{{ config.app.meta_description }}" />
   {% endif%}
+  
+  <!-- google translation widget -->
+  <meta name="google-translate-customization" content="af2d1f7bd33b7cff-34cb7fb4f8f58689-g09b8a7e11ee3413f-24"></meta>
+  
 {% endblock %}
 
 <!--
@@ -49,6 +53,14 @@
   <li class="clearfix"><img src="/static/css/images/legend-15.png"> <strong>Opportunities</strong> <small><br/>What areas are opportunities for change? Think about areas that are not living up to their potential that could be repositioned.</small></li>
   <li class="clearfix"><img src="/static/css/images/legend-14.png" > <strong>Barriers</strong> <small><br/>What impediments exist to accessing your destinations and strengths?</small></li>
 </ul>
+
+<ul class="legend">
+  <div id="google_translate_element"></div><script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, gaTrack: true, gaId: 'UA-46020552-16'}, 'google_translate_element');
+  }
+  </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </ul>
 {% endblock %}
 
 <!--
